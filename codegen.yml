@@ -1,0 +1,14 @@
+#this will hold the configurations for the GraphQL Codegen:
+
+schema: http://localhost:4000/graphql
+documents: "./src/**/*.graphql"
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+
+#This config file lets GraphQL Codegen know a GraphQL schema is availabel at
+#localhost:4000/graphql, where to find your queries, and where to output the
+#generated types using all of the plugins you installed
